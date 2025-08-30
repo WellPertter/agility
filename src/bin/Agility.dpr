@@ -1,0 +1,18 @@
+program Agility;
+
+uses
+  Vcl.Forms,
+  untMain in '..\..\view\untMain.pas' {formMain},
+  untDMmain in '..\..\datamodule\untDMmain.pas' {dmMain: TDataModule},
+  uConsultaPadrao in '..\..\view\uConsultaPadrao.pas' {frmConsultaPadrao},
+  untGrid in '..\..\view\untGrid.pas' {formGrid};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TformMain, formMain);
+  Application.CreateForm(TdmMain, dmMain);
+  Application.Run;
+end.

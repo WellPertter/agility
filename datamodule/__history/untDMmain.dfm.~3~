@@ -1,0 +1,13 @@
+object dmMain: TdmMain
+  Height = 480
+  Width = 640
+  object Connection: TFDConnection
+    Left = 48
+    Top = 80
+  end
+  object MySQLlinkDLL: TFDPhysMySQLDriverLink
+    VendorLib = 'C:\dev\System Mec\dll\libmysql.dll'
+    Left = 49
+    Top = 161
+  end
+end
