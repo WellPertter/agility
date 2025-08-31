@@ -51,11 +51,6 @@ object formGrid: TformGrid
       item
         Expanded = False
         FieldName = 'id'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
         Visible = True
       end
       item
@@ -75,8 +70,8 @@ object formGrid: TformGrid
     Connection = dmMain.Connection
     SQL.Strings = (
       'select * from tab_teste')
-    Left = 416
-    Top = 232
+    Left = 528
+    Top = 136
     object QryItensid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'

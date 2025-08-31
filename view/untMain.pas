@@ -15,6 +15,7 @@ type
     procedure btnConsultaClick(Sender: TObject);
     procedure edtCodigoExit(Sender: TObject);
     procedure btnGridClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -58,6 +59,24 @@ begin
     formGrid.ShowModal;
   finally
      formGrid.Free;
+  end;
+end;
+
+procedure TformMain.Button1Click(Sender: TObject);
+begin
+  frmConsultaPadrao := TfrmConsultaPadrao.Create(self);
+  try
+    frmConsultaPadrao.loadDates('id', 'SELECT id, descricao, tipo FROM tab_teste ');
+    frmConsultaPadrao.ShowModal;
+
+    if frmConsultaPadrao.codigo <> '' then
+     begin
+       edtCodigo.Text := frmConsultaPadrao.codigo;
+       edtCodigoExit(self);
+     end;
+
+  finally
+    frmConsultaPadrao.Free;
   end;
 end;
 

@@ -207,7 +207,7 @@ end.
 
   frmConsultaPadrao := TfrmConsultaPadrao.Create(self);
   try
-    frmConsultaPadrao.loadDates('ID', 'SELECT ID, NOME_COMPLETO FROM TAB_FORNECEDOR WHERE SITUACAO = ''ATIVO''');
+    frmConsultaPadrao.loadDates('id', 'SELECT id, descricao, tipo FROM tab_teste ');
     frmConsultaPadrao.ShowModal;
 
     if frmConsultaPadrao.codigo <> '' then
